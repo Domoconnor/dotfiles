@@ -1,3 +1,3 @@
 ## Dependencies
 
-`scrot imagemagick`
+`scrot imagemagick i3lock`
