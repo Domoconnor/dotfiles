@@ -1,3 +1,3 @@
 ## Dependencies
 
-`scrot imagemagick i3lock`
+`scrot imagemagick i3lock playerctl`
