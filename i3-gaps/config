@@ -130,10 +130,10 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # attach workspace to displays
-workspace $ws1 output HDMI-2
-workspace $ws2 output eDP-1
-workspace $ws3 output HDMI-2
-workspace $ws4 output eDP-1
+workspace $ws1 output HDMI2
+workspace $ws2 output eDP1
+workspace $ws3 output HDMI2
+workspace $ws4 output eDP1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
