@@ -108,3 +108,5 @@ alias phpcbf="vendor/bin/phpcbf --standard=PSR1,PSR2 -p --warning-severity=6  --
 
 #alias dbbackup = 'docker run --rm --volumes-from mysql -v $(pwd):/backup busybox tar cvf /backup/backup.tar /var/lib/mysql && scp backup.tar coserver@192.168.0.100:~/dbdata/backup.tar'
 #alias dbrestore = 'scp coserver@192.168.0.100:~/dbdata/backup.tar . && docker run --rm -i --volumes-from mysql -v $(pwd):/backup busybox tar -xpvf /backup/backup.tar -C /var/lib/mysql && docker-compose restart mysql'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

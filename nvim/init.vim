@@ -4,8 +4,6 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype on
 
-" TODO: Load plugins here (pathogen or vundle)
-
 " Turn on syntax highlighting
 syntax on
 
@@ -103,8 +101,10 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " colorscheme solarized
 
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'scrooloose/nerdtree'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
-Plug 'lvht/phpcd.vim', { 'for': 'php', 'do': 'composer install' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
