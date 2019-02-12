@@ -130,10 +130,10 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # attach workspace to displays
-workspace $ws1 output HDMI2
-workspace $ws2 output eDP1
-workspace $ws3 output HDMI2
-workspace $ws4 output eDP1
+workspace $ws1 output Virtual1
+workspace $ws2 output Virtual2
+workspace $ws3 output Virtual1
+workspace $ws4 output Virtual2
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -177,10 +177,10 @@ bindsym $mod+r mode "resize"
 #}
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
-bindsym $mod+bracketright exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
-bindsym $mod+bracketleft exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% #increase sound volume
+bindsym $mod+bracketright exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% #decrease sound volume
+bindsym $mod+bracketleft exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 bindsym $mod+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
@@ -210,7 +210,7 @@ bindsym $mod+minus scratchpad show
 
 exec --no-startup-id nm-applet
 exec_always --no-startup-id /home/dom/Documents/dotfiles/polybar/launch.sh
-
+exec --no-startup-id compton --config /home/dom/.config/compton.conf -b
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3exit lock, mode "default"
@@ -225,3 +225,4 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Home mode "$mode_system"
+

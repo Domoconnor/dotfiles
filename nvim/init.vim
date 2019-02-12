@@ -84,6 +84,10 @@ vnoremap <F1> :set invfullscreen<CR>
 " Formatting
 map <leader>q gqip
 
+" Cycle through buffers
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 " Uncomment this to enable by default:
@@ -107,4 +111,5 @@ Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'blindFS/vim-taskwarrior'
 call plug#end()

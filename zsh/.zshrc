@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH:/opt/bin
+
 # Path to your oh-my-zsh installation.
 export ZSH=/home/dom/.oh-my-zsh
 
@@ -104,3 +105,5 @@ alias gs="git status"
 alias gd="git diff"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval `dircolors /home/dom/.dir_colors/dircolors`
